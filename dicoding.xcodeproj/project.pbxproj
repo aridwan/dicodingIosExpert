@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		966DEF73DC0DB3FC29B8F40C /* Pods_dicoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AB0EB7DCD7C4BA838CEEFE /* Pods_dicoding.framework */; };
-		A11431F42983629A00C5C316 /* DetailRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11431F32983629A00C5C316 /* DetailRestaurant.swift */; };
+		A11431F42983629A00C5C316 /* DetailGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11431F32983629A00C5C316 /* DetailGame.swift */; };
 		A11431F82983636600C5C316 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11431F72983636600C5C316 /* Menu.swift */; };
 		A11431FA2983643B00C5C316 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11431F92983643B00C5C316 /* Category.swift */; };
 		A11431FD29836BC000C5C316 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11431FC29836BBF00C5C316 /* Endpoint.swift */; };
-		A114320029836FA300C5C316 /* DetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11431FE29836FA300C5C316 /* DetailImageTableViewCell.swift */; };
-		A114320129836FA300C5C316 /* DetailImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11431FF29836FA300C5C316 /* DetailImageTableViewCell.xib */; };
-		A11432062983717400C5C316 /* DetailInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11432042983717400C5C316 /* DetailInformationTableViewCell.swift */; };
-		A11432072983717400C5C316 /* DetailInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11432052983717400C5C316 /* DetailInformationTableViewCell.xib */; };
 		A11432112983BCA500C5C316 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11432102983BCA500C5C316 /* Review.swift */; };
+		A13AF4D5298CF3CA008FAC6C /* GameImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AF4D3298CF3CA008FAC6C /* GameImageCollectionViewCell.swift */; };
+		A13AF4D6298CF3CA008FAC6C /* GameImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13AF4D4298CF3CA008FAC6C /* GameImageCollectionViewCell.xib */; };
+		A13AF4D8298D08D6008FAC6C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AF4D7298D08D6008FAC6C /* ImageDownloader.swift */; };
 		A19E11712982D2BB0048867E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E11702982D2BB0048867E /* UIImageView.swift */; };
 		A19E11742982DDB80048867E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E11722982DDB80048867E /* ProfileViewController.swift */; };
 		A19E11752982DDB80048867E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19E11732982DDB80048867E /* ProfileViewController.xib */; };
@@ -28,21 +27,20 @@
 		A1E019E12982C47E00DD5CAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E019DF2982C47E00DD5CAD /* LaunchScreen.storyboard */; };
 		A1E019EA2982C56A00DD5CAD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E019E82982C56A00DD5CAD /* ListViewController.swift */; };
 		A1E019EB2982C56A00DD5CAD /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E019E92982C56A00DD5CAD /* ListViewController.xib */; };
-		A1E019ED2982C85400DD5CAD /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E019EC2982C85400DD5CAD /* Restaurant.swift */; };
+		A1E019ED2982C85400DD5CAD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E019EC2982C85400DD5CAD /* Game.swift */; };
 		A1E019F32982CC2000DD5CAD /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E019F12982CC2000DD5CAD /* ListTableViewCell.swift */; };
 		A1E019F42982CC2000DD5CAD /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E019F22982CC2000DD5CAD /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A11431F32983629A00C5C316 /* DetailRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurant.swift; sourceTree = "<group>"; };
+		A11431F32983629A00C5C316 /* DetailGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGame.swift; sourceTree = "<group>"; };
 		A11431F72983636600C5C316 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		A11431F92983643B00C5C316 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A11431FC29836BBF00C5C316 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		A11431FE29836FA300C5C316 /* DetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageTableViewCell.swift; sourceTree = "<group>"; };
-		A11431FF29836FA300C5C316 /* DetailImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailImageTableViewCell.xib; sourceTree = "<group>"; };
-		A11432042983717400C5C316 /* DetailInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInformationTableViewCell.swift; sourceTree = "<group>"; };
-		A11432052983717400C5C316 /* DetailInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailInformationTableViewCell.xib; sourceTree = "<group>"; };
 		A11432102983BCA500C5C316 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		A13AF4D3298CF3CA008FAC6C /* GameImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A13AF4D4298CF3CA008FAC6C /* GameImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		A13AF4D7298D08D6008FAC6C /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		A19E11702982D2BB0048867E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		A19E11722982DDB80048867E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A19E11732982DDB80048867E /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -56,7 +54,7 @@
 		A1E019E22982C47E00DD5CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1E019E82982C56A00DD5CAD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		A1E019E92982C56A00DD5CAD /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
-		A1E019EC2982C85400DD5CAD /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		A1E019EC2982C85400DD5CAD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A1E019F12982CC2000DD5CAD /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		A1E019F22982CC2000DD5CAD /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		A7101B55A98DF30F2FBFCD37 /* Pods-dicoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dicoding.release.xcconfig"; path = "Target Support Files/Pods-dicoding/Pods-dicoding.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				A11431FC29836BBF00C5C316 /* Endpoint.swift */,
+				A13AF4D7298D08D6008FAC6C /* ImageDownloader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -143,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				A11432102983BCA500C5C316 /* Review.swift */,
-				A1E019EC2982C85400DD5CAD /* Restaurant.swift */,
-				A11431F32983629A00C5C316 /* DetailRestaurant.swift */,
+				A1E019EC2982C85400DD5CAD /* Game.swift */,
+				A11431F32983629A00C5C316 /* DetailGame.swift */,
 				A11431F72983636600C5C316 /* Menu.swift */,
 				A11431F92983643B00C5C316 /* Category.swift */,
 			);
@@ -166,10 +165,8 @@
 			children = (
 				A1E019F12982CC2000DD5CAD /* ListTableViewCell.swift */,
 				A1E019F22982CC2000DD5CAD /* ListTableViewCell.xib */,
-				A11431FE29836FA300C5C316 /* DetailImageTableViewCell.swift */,
-				A11431FF29836FA300C5C316 /* DetailImageTableViewCell.xib */,
-				A11432042983717400C5C316 /* DetailInformationTableViewCell.swift */,
-				A11432052983717400C5C316 /* DetailInformationTableViewCell.xib */,
+				A13AF4D3298CF3CA008FAC6C /* GameImageCollectionViewCell.swift */,
+				A13AF4D4298CF3CA008FAC6C /* GameImageCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,9 +240,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E019E12982C47E00DD5CAD /* LaunchScreen.storyboard in Resources */,
-				A114320129836FA300C5C316 /* DetailImageTableViewCell.xib in Resources */,
+				A13AF4D6298CF3CA008FAC6C /* GameImageCollectionViewCell.xib in Resources */,
 				A19E11792982DE390048867E /* DetailViewController.xib in Resources */,
-				A11432072983717400C5C316 /* DetailInformationTableViewCell.xib in Resources */,
 				A1E019F42982CC2000DD5CAD /* ListTableViewCell.xib in Resources */,
 				A1E019DE2982C47E00DD5CAD /* Assets.xcassets in Resources */,
 				A19E11752982DDB80048867E /* ProfileViewController.xib in Resources */,
@@ -302,10 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A11432062983717400C5C316 /* DetailInformationTableViewCell.swift in Sources */,
-				A1E019ED2982C85400DD5CAD /* Restaurant.swift in Sources */,
+				A13AF4D5298CF3CA008FAC6C /* GameImageCollectionViewCell.swift in Sources */,
+				A13AF4D8298D08D6008FAC6C /* ImageDownloader.swift in Sources */,
+				A1E019ED2982C85400DD5CAD /* Game.swift in Sources */,
 				A1E019D52982C47C00DD5CAD /* AppDelegate.swift in Sources */,
-				A11431F42983629A00C5C316 /* DetailRestaurant.swift in Sources */,
+				A11431F42983629A00C5C316 /* DetailGame.swift in Sources */,
 				A11431FD29836BC000C5C316 /* Endpoint.swift in Sources */,
 				A11432112983BCA500C5C316 /* Review.swift in Sources */,
 				A1E019D72982C47C00DD5CAD /* SceneDelegate.swift in Sources */,
@@ -313,7 +310,6 @@
 				A11431F82983636600C5C316 /* Menu.swift in Sources */,
 				A19E11742982DDB80048867E /* ProfileViewController.swift in Sources */,
 				A19E11712982D2BB0048867E /* UIImageView.swift in Sources */,
-				A114320029836FA300C5C316 /* DetailImageTableViewCell.swift in Sources */,
 				A1E019F32982CC2000DD5CAD /* ListTableViewCell.swift in Sources */,
 				A19E11782982DE390048867E /* DetailViewController.swift in Sources */,
 				A11431FA2983643B00C5C316 /* Category.swift in Sources */,

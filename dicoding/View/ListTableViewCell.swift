@@ -7,29 +7,46 @@
 
 import UIKit
 import Reusable
+import Cosmos
 
 
 class ListTableViewCell: UITableViewCell, NibReusable {
   
   @IBOutlet weak var listImage: UIImageView!
   @IBOutlet weak var listTitle: UILabel!
-  @IBOutlet weak var listDescription: UILabel!
+  @IBOutlet weak var cosmos: CosmosView!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var platformView: UIView!
   
-  var restaurant: Restaurant? {
+  var game: Result? {
     didSet {
-      self.listTitle.text = self.restaurant?.name
-      self.listDescription.text = self.restaurant?.description
-      guard let url = URL(string: Endpoint.smallImageRestaurant + (self.restaurant?.pictureId ?? "")) else { return }
-      self.listImage.load(url: url)
+      self.removeAllSubviews(view: platformView)
+      self.listTitle.text = self.game?.name
+      self.activityIndicator.stopAnimating()
+      self.cosmos.rating = self.game?.rating ?? 0.0
+      self.setPlatformIcon(platforms: game?.parentPlatforms ?? [ParentPlatform](), view: self.platformView)
     }
   }
-  
   override func awakeFromNib() {
     super.awakeFromNib()
+    self.activityIndicator.startAnimating()
+    self.cosmos.settings.fillMode = .precise
   }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  
+  private func removeAllSubviews(view: UIView){
+    for item in view.subviews {
+      item.removeFromSuperview()
     }
+  }
     
+  private func setPlatformIcon(platforms: [ParentPlatform], view: UIView) {
+    var count = 0
+    for item in platforms {
+      let image = UIImage(named: item.platform?.slug?.rawValue ?? "")
+      let imageView = UIImageView(frame: CGRect(x: (25 * count), y: 0, width: 17, height: 17))
+      imageView.image = image
+      view.addSubview(imageView)
+      count += 1
+    }
+  }
 }

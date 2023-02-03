@@ -19,4 +19,20 @@ extension UIImageView{
           }
       }
   }
+  
+  func load(url: URL, activityIndicator: UIActivityIndicatorView) {
+    activityIndicator.isHidden = false
+    activityIndicator.startAnimating()
+      DispatchQueue.global().async {
+          if let data = try? Data(contentsOf: url) {
+              if let image = UIImage(data: data) {
+                  DispatchQueue.main.async {
+                      self.image = image
+                    activityIndicator.stopAnimating()
+                    activityIndicator.isHidden = true
+                  }
+              }
+          }
+      }
+  }
 }

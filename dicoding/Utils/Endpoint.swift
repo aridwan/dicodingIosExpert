@@ -8,8 +8,5 @@
 import Foundation
 
 struct Endpoint {
-  static let listRestaurant = "https://restaurant-api.dicoding.dev/list"
-  static let detailRestaurant = "https://restaurant-api.dicoding.dev/detail/"
-  static let smallImageRestaurant = "https://restaurant-api.dicoding.dev/images/small/"
-  static let largeImageRestaurant = "https://restaurant-api.dicoding.dev/images/large/"
+  static let listGame = "https://api.rawg.io/api/games"
 }
