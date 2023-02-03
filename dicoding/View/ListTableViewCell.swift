@@ -17,6 +17,7 @@ class ListTableViewCell: UITableViewCell, NibReusable {
   @IBOutlet weak var cosmos: CosmosView!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var platformView: UIView!
+  @IBOutlet weak var releaseDateLabel: UILabel!
   
   var game: Result? {
     didSet {
@@ -24,6 +25,7 @@ class ListTableViewCell: UITableViewCell, NibReusable {
       self.listTitle.text = self.game?.name
       self.activityIndicator.stopAnimating()
       self.cosmos.rating = self.game?.rating ?? 0.0
+      self.releaseDateLabel.text = "Release date \(self.game?.released ?? "")"
       self.setPlatformIcon(platforms: game?.parentPlatforms ?? [ParentPlatform](), view: self.platformView)
     }
   }

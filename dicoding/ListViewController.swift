@@ -50,6 +50,7 @@ class ListViewController: UIViewController {
       self.navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
     navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(profileTapped))
+    navigationItem.rightBarButtonItem?.tintColor = UIColor.white
     self.title = "Games By RAWG"
     self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
   }
