@@ -81,9 +81,22 @@ class Result: Codable {
     var tags: [Genre]?
     var esrbRating: EsrbRating?
     var shortScreenshots: [ShortScreenshot]?
+    var description_raw: String?
   
     var state: DownloadState = .new
+    var savedImage: Data?
     var image: UIImage?
+  
+  init(id: Int, name: String, released_date: String, rating: Double, added: Int, esrbRating: String, description_raw: String, savedImage: Data) {
+    self.id = id
+    self.name = name
+    self.released = released_date
+    self.rating = rating
+    self.added = added
+    self.esrbRating = EsrbRating(id: 0, name: Name.init(rawValue: esrbRating), slug: Slug.init(rawValue: esrbRating))
+    self.description_raw = description_raw
+    self.savedImage = savedImage
+  }
 
     enum CodingKeys: String, CodingKey {
         case id, slug, name, released, tba

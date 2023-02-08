@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,8 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var navigationController = UINavigationController()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    let mainController = ListViewController()
-    self.navigationController = UINavigationController(rootViewController: mainController)
     return true
   }
 

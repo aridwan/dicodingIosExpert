@@ -27,6 +27,9 @@ class ListTableViewCell: UITableViewCell, NibReusable {
       self.cosmos.rating = self.game?.rating ?? 0.0
       self.releaseDateLabel.text = "Release date \(self.game?.released ?? "")"
       self.setPlatformIcon(platforms: game?.parentPlatforms ?? [ParentPlatform](), view: self.platformView)
+      if let imageData = game?.savedImage {
+        self.listImage.image = UIImage(data: imageData)
+      }
     }
   }
   override func awakeFromNib() {

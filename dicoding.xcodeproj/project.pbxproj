@@ -16,6 +16,13 @@
 		A13AF4D5298CF3CA008FAC6C /* GameImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AF4D3298CF3CA008FAC6C /* GameImageCollectionViewCell.swift */; };
 		A13AF4D6298CF3CA008FAC6C /* GameImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13AF4D4298CF3CA008FAC6C /* GameImageCollectionViewCell.xib */; };
 		A13AF4D8298D08D6008FAC6C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AF4D7298D08D6008FAC6C /* ImageDownloader.swift */; };
+		A13AF4E02991336E008FAC6C /* dicodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AF4DF2991336E008FAC6C /* dicodingTests.swift */; };
+		A13AF4FA2991FCA7008FAC6C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AF4F82991FCA7008FAC6C /* FavoritesViewController.swift */; };
+		A13AF4FB2991FCA7008FAC6C /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13AF4F92991FCA7008FAC6C /* FavoritesViewController.xib */; };
+		A13AF4FD2991FED0008FAC6C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AF4FC2991FED0008FAC6C /* TabBarController.swift */; };
+		A13AF4FF29920146008FAC6C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AF4FE29920146008FAC6C /* Constants.swift */; };
+		A13AF50229921307008FAC6C /* Favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A13AF50029921307008FAC6C /* Favorites.xcdatamodeld */; };
+		A13AF50429922263008FAC6C /* FavoritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AF50329922263008FAC6C /* FavoritesProvider.swift */; };
 		A19E11712982D2BB0048867E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E11702982D2BB0048867E /* UIImageView.swift */; };
 		A19E11742982DDB80048867E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E11722982DDB80048867E /* ProfileViewController.swift */; };
 		A19E11752982DDB80048867E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19E11732982DDB80048867E /* ProfileViewController.xib */; };
@@ -32,6 +39,16 @@
 		A1E019F42982CC2000DD5CAD /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E019F22982CC2000DD5CAD /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A13AF4E12991336E008FAC6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1E019C92982C47C00DD5CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1E019D02982C47C00DD5CAD;
+			remoteInfo = dicoding;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A11431F32983629A00C5C316 /* DetailGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGame.swift; sourceTree = "<group>"; };
 		A11431F72983636600C5C316 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -41,6 +58,14 @@
 		A13AF4D3298CF3CA008FAC6C /* GameImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		A13AF4D4298CF3CA008FAC6C /* GameImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		A13AF4D7298D08D6008FAC6C /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		A13AF4DD2991336E008FAC6C /* dicodingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dicodingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13AF4DF2991336E008FAC6C /* dicodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dicodingTests.swift; sourceTree = "<group>"; };
+		A13AF4F82991FCA7008FAC6C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		A13AF4F92991FCA7008FAC6C /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		A13AF4FC2991FED0008FAC6C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A13AF4FE29920146008FAC6C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A13AF50129921307008FAC6C /* Games.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Games.xcdatamodel; sourceTree = "<group>"; };
+		A13AF50329922263008FAC6C /* FavoritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProvider.swift; sourceTree = "<group>"; };
 		A19E11702982D2BB0048867E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		A19E11722982DDB80048867E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A19E11732982DDB80048867E /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -63,6 +88,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A13AF4DA2991336E008FAC6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1E019CE2982C47C00DD5CAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,14 +120,40 @@
 			children = (
 				A11431FC29836BBF00C5C316 /* Endpoint.swift */,
 				A13AF4D7298D08D6008FAC6C /* ImageDownloader.swift */,
+				A13AF4FE29920146008FAC6C /* Constants.swift */,
+				A13AF50329922263008FAC6C /* FavoritesProvider.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A13AF4DE2991336E008FAC6C /* dicodingTests */ = {
+			isa = PBXGroup;
+			children = (
+				A13AF4DF2991336E008FAC6C /* dicodingTests.swift */,
+			);
+			path = dicodingTests;
+			sourceTree = "<group>";
+		};
+		A13AF4F72991F988008FAC6C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A19E11722982DDB80048867E /* ProfileViewController.swift */,
+				A19E11732982DDB80048867E /* ProfileViewController.xib */,
+				A19E11762982DE390048867E /* DetailViewController.swift */,
+				A19E11772982DE390048867E /* DetailViewController.xib */,
+				A1E019E82982C56A00DD5CAD /* ListViewController.swift */,
+				A1E019E92982C56A00DD5CAD /* ListViewController.xib */,
+				A13AF4F82991FCA7008FAC6C /* FavoritesViewController.swift */,
+				A13AF4F92991FCA7008FAC6C /* FavoritesViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		A19E116F2982D2A60048867E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				A19E11702982D2BB0048867E /* UIImageView.swift */,
+				A13AF4FC2991FED0008FAC6C /* TabBarController.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -104,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				A1E019D32982C47C00DD5CAD /* dicoding */,
+				A13AF4DE2991336E008FAC6C /* dicodingTests */,
 				A1E019D22982C47C00DD5CAD /* Products */,
 				9FD54FDF0CBCEC4396C9DEAB /* Pods */,
 				ACA651D73090EBF206863436 /* Frameworks */,
@@ -114,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				A1E019D12982C47C00DD5CAD /* dicoding.app */,
+				A13AF4DD2991336E008FAC6C /* dicodingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,14 +186,10 @@
 				A19E116F2982D2A60048867E /* Extension */,
 				A11431FB29836B9E00C5C316 /* Utils */,
 				A1E019F02982CBF300DD5CAD /* View */,
-				A1E019E82982C56A00DD5CAD /* ListViewController.swift */,
-				A1E019E92982C56A00DD5CAD /* ListViewController.xib */,
-				A19E11722982DDB80048867E /* ProfileViewController.swift */,
-				A19E11732982DDB80048867E /* ProfileViewController.xib */,
-				A19E11762982DE390048867E /* DetailViewController.swift */,
-				A19E11772982DE390048867E /* DetailViewController.xib */,
+				A13AF4F72991F988008FAC6C /* ViewController */,
 				A1E019DD2982C47E00DD5CAD /* Assets.xcassets */,
 				A1E019E22982C47E00DD5CAD /* Info.plist */,
+				A13AF50029921307008FAC6C /* Favorites.xcdatamodeld */,
 			);
 			path = dicoding;
 			sourceTree = "<group>";
@@ -182,6 +238,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A13AF4DC2991336E008FAC6C /* dicodingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A13AF4E32991336E008FAC6C /* Build configuration list for PBXNativeTarget "dicodingTests" */;
+			buildPhases = (
+				A13AF4D92991336E008FAC6C /* Sources */,
+				A13AF4DA2991336E008FAC6C /* Frameworks */,
+				A13AF4DB2991336E008FAC6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A13AF4E22991336E008FAC6C /* PBXTargetDependency */,
+			);
+			name = dicodingTests;
+			productName = dicodingTests;
+			productReference = A13AF4DD2991336E008FAC6C /* dicodingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A1E019D02982C47C00DD5CAD /* dicoding */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1E019E52982C47E00DD5CAD /* Build configuration list for PBXNativeTarget "dicoding" */;
@@ -211,6 +285,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					A13AF4DC2991336E008FAC6C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A1E019D02982C47C00DD5CAD;
+					};
 					A1E019D02982C47C00DD5CAD = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -230,11 +308,19 @@
 			projectRoot = "";
 			targets = (
 				A1E019D02982C47C00DD5CAD /* dicoding */,
+				A13AF4DC2991336E008FAC6C /* dicodingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A13AF4DB2991336E008FAC6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1E019CF2982C47C00DD5CAD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +331,7 @@
 				A1E019F42982CC2000DD5CAD /* ListTableViewCell.xib in Resources */,
 				A1E019DE2982C47E00DD5CAD /* Assets.xcassets in Resources */,
 				A19E11752982DDB80048867E /* ProfileViewController.xib in Resources */,
+				A13AF4FB2991FCA7008FAC6C /* FavoritesViewController.xib in Resources */,
 				A1E019EB2982C56A00DD5CAD /* ListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +381,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A13AF4D92991336E008FAC6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13AF4E02991336E008FAC6C /* dicodingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1E019CD2982C47C00DD5CAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,16 +402,29 @@
 				A11432112983BCA500C5C316 /* Review.swift in Sources */,
 				A1E019D72982C47C00DD5CAD /* SceneDelegate.swift in Sources */,
 				A1E019EA2982C56A00DD5CAD /* ListViewController.swift in Sources */,
+				A13AF4FD2991FED0008FAC6C /* TabBarController.swift in Sources */,
 				A11431F82983636600C5C316 /* Menu.swift in Sources */,
+				A13AF50229921307008FAC6C /* Favorites.xcdatamodeld in Sources */,
+				A13AF4FA2991FCA7008FAC6C /* FavoritesViewController.swift in Sources */,
 				A19E11742982DDB80048867E /* ProfileViewController.swift in Sources */,
+				A13AF50429922263008FAC6C /* FavoritesProvider.swift in Sources */,
 				A19E11712982D2BB0048867E /* UIImageView.swift in Sources */,
 				A1E019F32982CC2000DD5CAD /* ListTableViewCell.swift in Sources */,
 				A19E11782982DE390048867E /* DetailViewController.swift in Sources */,
 				A11431FA2983643B00C5C316 /* Category.swift in Sources */,
+				A13AF4FF29920146008FAC6C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A13AF4E22991336E008FAC6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1E019D02982C47C00DD5CAD /* dicoding */;
+			targetProxy = A13AF4E12991336E008FAC6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A1E019DF2982C47E00DD5CAD /* LaunchScreen.storyboard */ = {
@@ -330,6 +438,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A13AF4E42991336E008FAC6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34P38G6F6Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aridwan.dicodingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dicoding.app/dicoding";
+			};
+			name = Debug;
+		};
+		A13AF4E52991336E008FAC6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34P38G6F6Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aridwan.dicodingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dicoding.app/dicoding";
+			};
+			name = Release;
+		};
 		A1E019E32982C47E00DD5CAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -505,6 +649,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A13AF4E32991336E008FAC6C /* Build configuration list for PBXNativeTarget "dicodingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13AF4E42991336E008FAC6C /* Debug */,
+				A13AF4E52991336E008FAC6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A1E019CC2982C47C00DD5CAD /* Build configuration list for PBXProject "dicoding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -524,6 +677,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A13AF50029921307008FAC6C /* Favorites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A13AF50129921307008FAC6C /* Games.xcdatamodel */,
+			);
+			currentVersion = A13AF50129921307008FAC6C /* Games.xcdatamodel */;
+			path = Favorites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1E019C92982C47C00DD5CAD /* Project object */;
 }
