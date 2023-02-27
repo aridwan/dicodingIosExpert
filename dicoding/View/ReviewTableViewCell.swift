@@ -10,7 +10,6 @@ import Reusable
 
 class ReviewTableViewCell: UITableViewCell, NibReusable {
 
-  
   @IBOutlet weak var collectionView: UICollectionView!
   
   var detailRestaurant: DetailRestaurant? {
@@ -24,7 +23,7 @@ class ReviewTableViewCell: UITableViewCell, NibReusable {
         self.registerCell()
     }
 
-  private func registerCell(){
+  private func registerCell() {
     self.collectionView.register(cellType: ReviewCollectionViewCell.self)
   }
   
@@ -36,7 +35,7 @@ class ReviewTableViewCell: UITableViewCell, NibReusable {
 
 extension ReviewTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 4 //detailRestaurant?.customerReviews?.count ?? 0
+    return 4
   }
   
   func numberOfSections(in collectionView: UICollectionView) -> Int {

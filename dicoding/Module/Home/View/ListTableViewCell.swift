@@ -9,7 +9,6 @@ import UIKit
 import Reusable
 import Cosmos
 
-
 class ListTableViewCell: UITableViewCell, NibReusable {
   
   @IBOutlet weak var listImage: UIImageView!
@@ -19,7 +18,7 @@ class ListTableViewCell: UITableViewCell, NibReusable {
   @IBOutlet weak var platformView: UIView!
   @IBOutlet weak var releaseDateLabel: UILabel!
   
-  var game: Result? {
+  var game: Game? {
     didSet {
       self.removeAllSubviews(view: platformView)
       self.listTitle.text = self.game?.name
@@ -38,7 +37,7 @@ class ListTableViewCell: UITableViewCell, NibReusable {
     self.cosmos.settings.fillMode = .precise
   }
   
-  private func removeAllSubviews(view: UIView){
+  private func removeAllSubviews(view: UIView) {
     for item in view.subviews {
       item.removeFromSuperview()
     }

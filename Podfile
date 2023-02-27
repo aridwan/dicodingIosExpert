@@ -10,4 +10,7 @@ target 'dicoding' do
   pod 'SwiftyJSON'
   pod 'Reusable'
   pod 'Cosmos', '~> 23.0'
+  pod 'SwiftLint'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end

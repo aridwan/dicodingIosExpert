@@ -11,38 +11,26 @@ import Alamofire
 class ListViewController: UIViewController {
 
   @IBOutlet weak var table: UITableView!
-  var games = [Result]()
+  
+  var presenter: HomePresenter?
+//  var games = [Game]()
   
     override func viewDidLoad() {
       super.viewDidLoad()
+      let homeUseCase = Injection.init().provideHome()
+      self.presenter = HomePresenter.init(homeUseCase: homeUseCase)
       self.registerCell()
       self.setNavigationItem()
-      Task { await self.callApi(page: "1") }
-      table.reloadData()
-    }
-  
-  private func registerCell(){
-    self.table.register(cellType: ListTableViewCell.self)
-  }
-  
-  private func callApi(page: String) async{
-    let params: [String: String] = [
-      "key": Constants.APIKey,
-      "page": page,
-      "page_size": "15"
-    ]
-    AF.request(Endpoint.listGame, parameters: params).validate().responseDecodable(of: ListGame.self) { response in
-      switch response.result{
-      case .success(let types):
-        self.games = types.results ?? [Result]()
+      self.presenter?.getGames {
         self.table.reloadData()
-      case .failure(let error):
-        print(error)
       }
     }
+  
+  private func registerCell() {
+    self.table.register(cellType: ListTableViewCell.self)
   }
 
-  private func setNavigationItem(){
+  private func setNavigationItem() {
     if #available(iOS 11.0, *) {
       self.navigationController?.navigationBar.prefersLargeTitles = true
       self.navigationController?.navigationItem.largeTitleDisplayMode = .always
@@ -53,12 +41,12 @@ class ListViewController: UIViewController {
     self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
   }
   
-  @objc func profileTapped(){
+  @objc func profileTapped() {
     let viewController = ProfileViewController()
     self.navigationController?.pushViewController(viewController, animated: true)
   }
   
-  fileprivate func startDownload(game: Result, indexPath: IndexPath) {
+  func startDownload(game: Game, indexPath: IndexPath) {
       let imageDownloader = ImageDownloader()
       if game.state == .new {
         Task {
@@ -80,25 +68,28 @@ class ListViewController: UIViewController {
 
 extension ListViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return games.count
+    return self.presenter?.games.count ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: ListTableViewCell = table.dequeueReusableCell(for: indexPath)
-    let game = games[indexPath.row]
+    guard let game = self.presenter?.games[indexPath.row] else {return cell}
     cell.listImage.image = game.image
     cell.game = game
-    if games[indexPath.row].state == .new {
-      startDownload(game: games[indexPath.row], indexPath: indexPath)
+    if self.presenter?.games[indexPath.row].state == .new {
+      
+      startDownload(game: game, indexPath: indexPath)
       }
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let viewController = DetailViewController()
-    viewController.game = self.games[indexPath.row]
-    self.tabBarController?.tabBar.isHidden = true
-    self.navigationController?.pushViewController(viewController, animated: true)
+    guard let game = self.presenter?.games[indexPath.row] else { return }
+    self.presenter?.goToDetail(with: game, navigationController: self.navigationController ?? UINavigationController())
+//    let viewController = DetailViewController()
+//    viewController.game = self.presenter.games?[indexPath.row]
+//    self.tabBarController?.tabBar.isHidden = true
+//    self.navigationController?.pushViewController(viewController, animated: true)
   }
   
 }

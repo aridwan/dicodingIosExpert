@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIImageView{
+extension UIImageView {
   func load(url: URL) {
       DispatchQueue.global().async {
           if let data = try? Data(contentsOf: url) {
@@ -35,4 +35,16 @@ extension UIImageView{
           }
       }
   }
+}
+
+extension UIImage {
+    convenience init?(url: URL) {
+        do {
+            let imageData = try Data(contentsOf: url)
+            self.init(data: imageData)
+        } catch {
+            print("Error loading image from URL: \(error.localizedDescription)")
+            return nil
+        }
+    }
 }

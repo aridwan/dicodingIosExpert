@@ -68,5 +68,692 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35EBAA01-F1E4-4318-B48C-BD1B8BB3CE8E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/List/Presenter/HomePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getGames(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0013416B-09A0-470A-AB81-0EB07A584617"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Data/Remote/RemoteDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getGames(result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "927C472B-AD52-4C66-82CF-A1EA595A3CC0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/List/View/ListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "927C472B-AD52-4C66-82CF-A1EA595A3CC0 - b9804df418eac33e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dicoding.ListViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Module/List/View/ListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "231">
+               </Location>
+               <Location
+                  uuid = "927C472B-AD52-4C66-82CF-A1EA595A3CC0 - 67231a0cee75845d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in dicoding.ListViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Module/List/View/ListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5C86F50-052B-4E69-A846-B075783244FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/List/Presenter/HomePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getGames(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8633486E-9401-4200-9C4C-D26B26992393"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Domain/UseCase/HomeInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getGames(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8633486E-9401-4200-9C4C-D26B26992393 - 8ac18870192b9eda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dicoding.HomeInteractor.getGames(completion: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Domain/UseCase/HomeInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "8633486E-9401-4200-9C4C-D26B26992393 - 8098df9113cf6664"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; () in dicoding.HomeInteractor.getGames(completion: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Domain/UseCase/HomeInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "67">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4859CED8-58DD-4238-ABD2-90D0E009E077"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Data/GameRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getGames(result:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4859CED8-58DD-4238-ABD2-90D0E009E077 - e57167f11d2d4d0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dicoding.GameRepository.getGames(result: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Data/GameRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  uuid = "4859CED8-58DD-4238-ABD2-90D0E009E077 - 20eac24c7c99d093"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, dicoding.URLError&gt;) -&gt; () in dicoding.GameRepository.getGames(result: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Data/GameRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F66865D-7D13-48C1-903A-1370E5A4E044"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Data/Remote/RemoteDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getGames(result:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2F66865D-7D13-48C1-903A-1370E5A4E044 - 2c2ec317d119552a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dicoding.RemoteDataSource.getGames(result: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, dicoding.URLError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Data/Remote/RemoteDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "194">
+               </Location>
+               <Location
+                  uuid = "2F66865D-7D13-48C1-903A-1370E5A4E044 - 2c2ec317d119552a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dicoding.RemoteDataSource.getGames(result: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, dicoding.URLError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Data/Remote/RemoteDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "329">
+               </Location>
+               <Location
+                  uuid = "2F66865D-7D13-48C1-903A-1370E5A4E044 - 2c2ec317d119552a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dicoding.RemoteDataSource.getGames(result: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, dicoding.URLError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Data/Remote/RemoteDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1569">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAB98997-E31C-4D74-8827-8E098159CB6C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/List/View/ListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB3C2A1B-4589-4A5A-974C-72633D13C00C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Detail/Presenter/DetailPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getDetailGame(game:completion:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "607B1325-C376-4E5F-96C9-F29156288D15"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Home/Router/HomeRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "makeDetailView(for:navigationController:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1C7AFFA-6DF4-430E-A2F0-2D82C0E60466"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Home/Presenter/HomePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "goToDetail(with:navigationController:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "686258F6-FC1B-4BCF-A505-BE6266D34D2E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Home/View/ListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B69F8EB9-ECB9-4ED0-98E7-B197202ADDBF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Detail/Presenter/DetailPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getDetailGame(game:completion:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EAC273BE-6B0D-4B80-914B-DC8AEC7D1404"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Data/Remote/RemoteDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "getDetailGame(game:result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D8705B1-4967-465B-B48B-7BE4B19A20E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Detail/View/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "emptyHeart()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E0F64A2-CF60-4D40-BDCE-DB21CCF8DBEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Detail/View/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "setNavigationItem()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3E0F64A2-CF60-4D40-BDCE-DB21CCF8DBEC - ad8c9cd9a41475fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in dicoding.DetailViewController.setNavigationItem() -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Module/Detail/View/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "3E0F64A2-CF60-4D40-BDCE-DB21CCF8DBEC - 938bac4cf699a0a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 () -&gt; () in dicoding.DetailViewController.setNavigationItem() -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Module/Detail/View/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DAE998AF-6997-4C6B-AEAF-AC1539E1B267"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Detail/View/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "setNavigationItem()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00016874-CB36-4FE4-8F80-DD0FBEA6D914"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Detail/View/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D55ED4EA-6A7D-4716-8C94-1F2E0F1EECE5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Detail/View/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F14495D4-6201-42A9-BC82-379F4FD28205"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Favorites/View/FavoritesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0CFF0C20-6BD5-4C22-908D-586B41958833"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Data/GameRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "getFavorites(result:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0CFF0C20-6BD5-4C22-908D-586B41958833 - bd58b9c9f5a30965"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dicoding.GameRepository.getFavorites(result: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Data/GameRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  uuid = "0CFF0C20-6BD5-4C22-908D-586B41958833 - a2e01b162d534903"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; () in dicoding.GameRepository.getFavorites(result: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Data/GameRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "142">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E296DFAC-14A1-417D-B28C-B40D98C312DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Domain/UseCase/HomeInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getFavorites(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E296DFAC-14A1-417D-B28C-B40D98C312DD - 8a2a6cfe7f7c3e7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dicoding.HomeInteractor.getFavorites(completion: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Domain/UseCase/HomeInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "E296DFAC-14A1-417D-B28C-B40D98C312DD - fff13e10bf3571f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; () in dicoding.HomeInteractor.getFavorites(completion: (Swift.Result&lt;Swift.Array&lt;dicoding.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Domain/UseCase/HomeInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "67">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "758CEDC9-B84D-408E-A4AB-9BA1BBC238BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Home/Presenter/HomePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "getAllFavorites(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A932FE50-7424-4EC2-8FFE-2D97CE8138ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Detail/Presenter/DetailPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "removeFavorites(game:completion:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "A932FE50-7424-4EC2-8FFE-2D97CE8138ED - 86a1fc50f9dfbe5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dicoding.DetailPresenter.removeFavorites(game: dicoding.Game, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Module/Detail/Presenter/DetailPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "81">
+               </Location>
+               <Location
+                  uuid = "A932FE50-7424-4EC2-8FFE-2D97CE8138ED - ab7bedb9b351a884"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; () in dicoding.DetailPresenter.removeFavorites(game: dicoding.Game, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "dicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aridwan/Desktop/dicoding/dicoding/Module/Detail/Presenter/DetailPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "153">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A2EAE01-1C62-480A-8031-B1677341D8D1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Favorites/View/FavoritesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D82595B-3E88-401A-9D79-B3B23A8980C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dicoding/Module/Favorites/View/FavoritesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

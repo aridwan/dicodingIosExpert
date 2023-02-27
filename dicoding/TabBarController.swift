@@ -23,13 +23,11 @@ class TabBarController: UITabBarController {
     guard let gamesImage = UIImage(systemName: "gamecontroller.fill"), let favoritesImage = UIImage(systemName: "star.fill") else {return}
         viewControllers = [
             createNavController(for: ListViewController(), title: NSLocalizedString("Games", comment: ""), image: gamesImage),
-            createNavController(for: FavoritesViewController(), title: NSLocalizedString("Favorites", comment: ""), image: favoritesImage),
+            createNavController(for: FavoritesViewController(), title: NSLocalizedString("Favorites", comment: ""), image: favoritesImage)
         ]
     }
   
-  fileprivate func createNavController(for rootViewController: UIViewController,
-                                                  title: String,
-                                                  image: UIImage) -> UIViewController {
+  fileprivate func createNavController(for rootViewController: UIViewController, title: String, image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image

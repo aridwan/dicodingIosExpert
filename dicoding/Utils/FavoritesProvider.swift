@@ -34,33 +34,34 @@ class FavoritesProvider {
           return taskContext
       }
   
-  func getAllFavorites(completion: @escaping(_ favorites: [Result]) -> Void) {
+  func getAllFavorites(completion: @escaping(Result<[Game], Error>) -> Void) {
     let taskContext = newTaskContext()
     taskContext.perform {
       let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
       do {
         let results = try taskContext.fetch(fetchRequest)
-        var games: [Result] = []
+        var games: [Game] = []
         for result in results {
-          let game = Result(
+          let game = Game(
             id: result.value(forKeyPath: "id") as? Int ?? 0,
             name: result.value(forKeyPath: "name") as? String ?? "",
-            released_date: result.value(forKeyPath: "released_date") as? String ?? "",
+            releasedDate: result.value(forKeyPath: "released_date") as? String ?? "",
             rating: result.value(forKeyPath: "rating") as? Double ?? 0,
             added: result.value(forKeyPath: "added") as? Int ?? 0,
             esrbRating: result.value(forKeyPath: "esrb_rating") as? String ?? "",
-            description_raw: result.value(forKeyPath: "description_raw") as? String ?? "",
+            descriptionRaw: result.value(forKeyPath: "description_raw") as? String ?? "",
             savedImage: result.value(forKeyPath: "image") as? Data ?? Data())
           games.append(game)
         }
-        completion(games)
-      } catch let error as NSError{
+        completion(.success(games))
+      } catch let error as NSError {
         print("Could not fetch. \(error), \(error.userInfo)")
+        completion(.failure(error))
       }
     }
   }
   
-  func getGames(by id: Int, completion: @escaping(_ game: Result) -> Void){
+  func getGames(by id: Int, completion: @escaping(Result<Game, Error>) -> Void) {
     let taskContext = newTaskContext()
         taskContext.perform {
           let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
@@ -68,39 +69,41 @@ class FavoritesProvider {
           fetchRequest.predicate = NSPredicate(format: "id == \(id)")
           do {
             if let result = try taskContext.fetch(fetchRequest).first {
-              let game = Result(
+              let game = Game(
                 id: result.value(forKeyPath: "id") as? Int ?? 0,
                 name: result.value(forKeyPath: "name") as? String ?? "",
-                released_date: result.value(forKeyPath: "released_date") as? String ?? "",
+                releasedDate: result.value(forKeyPath: "released_date") as? String ?? "",
                 rating: result.value(forKeyPath: "rating") as? Double ?? 0,
                 added: result.value(forKeyPath: "added") as? Int ?? 0,
                 esrbRating: result.value(forKeyPath: "esrb_rating") as? String ?? "",
-                description_raw: result.value(forKeyPath: "description_raw") as? String ?? "",
+                descriptionRaw: result.value(forKeyPath: "description_raw") as? String ?? "",
                 savedImage: result.value(forKeyPath: "image") as? Data ?? Data()
               )
-              completion(game)
+              completion(.success(game))
             }
           } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
+            completion(.failure(error))
           }
         }
   }
   
-  func createFavorites(id: Int, name: String, released_date: String, rating: Double, added: Int, esrb_rating: String, description_raw: String, image: Data) {
+  func createFavorites(id: Int, name: String, releasedDate: String, rating: Double, added: Int, esrbRating: String, descriptionRaw: String, image: Data, completion: @escaping (Result<Bool, Error>) -> Void) {
       let taskContext = newTaskContext()
       taskContext.performAndWait {
         if let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: taskContext) {
           let game = NSManagedObject(entity: entity, insertInto: taskContext)
             game.setValue(id, forKeyPath: "id")
             game.setValue(name, forKeyPath: "name")
-            game.setValue(released_date, forKeyPath: "released_date")
+            game.setValue(releasedDate, forKeyPath: "released_date")
             game.setValue(rating, forKeyPath: "rating")
             game.setValue(added, forKeyPath: "added")
-            game.setValue(esrb_rating, forKeyPath: "esrb_rating")
-            game.setValue(description_raw, forKeyPath: "description_raw")
+            game.setValue(esrbRating, forKeyPath: "esrb_rating")
+            game.setValue(descriptionRaw, forKeyPath: "description_raw")
             game.setValue(image, forKey: "image")
             do {
               try taskContext.save()
+              completion(.success(true))
             } catch let error as NSError {
               print("Could not save. \(error), \(error.userInfo)")
             }
@@ -128,7 +131,7 @@ class FavoritesProvider {
     }
   }
 
-  func deleteFavorites(_ id: Int) {
+  func deleteFavorites(_ id: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
       let taskContext = newTaskContext()
       taskContext.perform {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorites")
@@ -138,10 +141,27 @@ class FavoritesProvider {
         batchDeleteRequest.resultType = .resultTypeCount
         if let batchDeleteResult = try? taskContext.execute(batchDeleteRequest) as? NSBatchDeleteResult {
           if batchDeleteResult.result != nil {
-            
+            completion(.success(true))
           }
         }
       }
     }
   
+  func deleteAll(){
+    // Get the managed object context for the Core Data stack
+    let context = persistentContainer.viewContext
+
+    // Create a fetch request for the entity you want to delete from
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorites")
+
+    // Create a batch delete request for the fetch request
+    let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+    // Execute the batch delete request
+    do {
+        try context.execute(batchDeleteRequest)
+    } catch {
+        // Handle the error
+    }
+  }
 }
