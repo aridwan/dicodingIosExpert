@@ -7,6 +7,7 @@
 
 import CoreData
 import UIKit
+import RxSwift
 
 class FavoritesProvider {
     
@@ -34,105 +35,99 @@ class FavoritesProvider {
           return taskContext
       }
   
-  func getAllFavorites(completion: @escaping(Result<[Game], Error>) -> Void) {
-    let taskContext = newTaskContext()
-    taskContext.perform {
-      let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
-      do {
-        let results = try taskContext.fetch(fetchRequest)
-        var games: [Game] = []
-        for result in results {
-          let game = Game(
-            id: result.value(forKeyPath: "id") as? Int ?? 0,
-            name: result.value(forKeyPath: "name") as? String ?? "",
-            releasedDate: result.value(forKeyPath: "released_date") as? String ?? "",
-            rating: result.value(forKeyPath: "rating") as? Double ?? 0,
-            added: result.value(forKeyPath: "added") as? Int ?? 0,
-            esrbRating: result.value(forKeyPath: "esrb_rating") as? String ?? "",
-            descriptionRaw: result.value(forKeyPath: "description_raw") as? String ?? "",
-            savedImage: result.value(forKeyPath: "image") as? Data ?? Data())
-          games.append(game)
+  func getAllFavorites() -> Observable<[Game]> {
+    return Observable<[Game]>.create { observer in
+      let taskContext = self.newTaskContext()
+      taskContext.perform {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
+        do {
+          let results = try taskContext.fetch(fetchRequest)
+          var games: [Game] = []
+          for result in results {
+            let game = Game(
+              id: result.value(forKeyPath: "id") as? Int ?? 0,
+              name: result.value(forKeyPath: "name") as? String ?? "",
+              releasedDate: result.value(forKeyPath: "released_date") as? String ?? "",
+              rating: result.value(forKeyPath: "rating") as? Double ?? 0,
+              added: result.value(forKeyPath: "added") as? Int ?? 0,
+              esrbRating: result.value(forKeyPath: "esrb_rating") as? String ?? "",
+              descriptionRaw: result.value(forKeyPath: "description_raw") as? String ?? "",
+              savedImage: result.value(forKeyPath: "image") as? Data ?? Data())
+            games.append(game)
+          }
+          observer.onNext(games)
+          observer.onCompleted()
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+          observer.onError(error)
         }
-        completion(.success(games))
-      } catch let error as NSError {
-        print("Could not fetch. \(error), \(error.userInfo)")
-        completion(.failure(error))
       }
+      return Disposables.create()
     }
   }
   
-  func getGames(by id: Int, completion: @escaping(Result<Game, Error>) -> Void) {
-    let taskContext = newTaskContext()
-        taskContext.perform {
-          let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
-          fetchRequest.fetchLimit = 1
-          fetchRequest.predicate = NSPredicate(format: "id == \(id)")
-          do {
-            if let result = try taskContext.fetch(fetchRequest).first {
-              let game = Game(
-                id: result.value(forKeyPath: "id") as? Int ?? 0,
-                name: result.value(forKeyPath: "name") as? String ?? "",
-                releasedDate: result.value(forKeyPath: "released_date") as? String ?? "",
-                rating: result.value(forKeyPath: "rating") as? Double ?? 0,
-                added: result.value(forKeyPath: "added") as? Int ?? 0,
-                esrbRating: result.value(forKeyPath: "esrb_rating") as? String ?? "",
-                descriptionRaw: result.value(forKeyPath: "description_raw") as? String ?? "",
-                savedImage: result.value(forKeyPath: "image") as? Data ?? Data()
-              )
-              completion(.success(game))
-            }
-          } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-            completion(.failure(error))
+  func getGame(by id: Int) -> Observable<Game> {
+    return Observable<Game>.create { observer in
+      let taskContext = self.newTaskContext()
+      taskContext.perform {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
+        fetchRequest.fetchLimit = 1
+        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
+        do {
+          if let result = try taskContext.fetch(fetchRequest).first {
+            let game = Game(
+              id: result.value(forKeyPath: "id") as? Int ?? 0,
+              name: result.value(forKeyPath: "name") as? String ?? "",
+              releasedDate: result.value(forKeyPath: "released_date") as? String ?? "",
+              rating: result.value(forKeyPath: "rating") as? Double ?? 0,
+              added: result.value(forKeyPath: "added") as? Int ?? 0,
+              esrbRating: result.value(forKeyPath: "esrb_rating") as? String ?? "",
+              descriptionRaw: result.value(forKeyPath: "description_raw") as? String ?? "",
+              savedImage: result.value(forKeyPath: "image") as? Data ?? Data()
+            )
+            observer.onNext(game)
+            observer.onCompleted()
           }
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+          observer.onError(error)
         }
+      }
+      return Disposables.create()
+    }
   }
   
-  func createFavorites(id: Int, name: String, releasedDate: String, rating: Double, added: Int, esrbRating: String, descriptionRaw: String, image: Data, completion: @escaping (Result<Bool, Error>) -> Void) {
-      let taskContext = newTaskContext()
+  func createFavorites(id: Int, name: String, releasedDate: String, rating: Double, added: Int, esrbRating: String, descriptionRaw: String, image: Data) -> Observable<Bool> {
+    return Observable<Bool>.create { observer in
+      let taskContext = self.newTaskContext()
       taskContext.performAndWait {
         if let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: taskContext) {
           let game = NSManagedObject(entity: entity, insertInto: taskContext)
-            game.setValue(id, forKeyPath: "id")
-            game.setValue(name, forKeyPath: "name")
-            game.setValue(releasedDate, forKeyPath: "released_date")
-            game.setValue(rating, forKeyPath: "rating")
-            game.setValue(added, forKeyPath: "added")
-            game.setValue(esrbRating, forKeyPath: "esrb_rating")
-            game.setValue(descriptionRaw, forKeyPath: "description_raw")
-            game.setValue(image, forKey: "image")
-            do {
-              try taskContext.save()
-              completion(.success(true))
-            } catch let error as NSError {
-              print("Could not save. \(error), \(error.userInfo)")
-            }
+          game.setValue(id, forKeyPath: "id")
+          game.setValue(name, forKeyPath: "name")
+          game.setValue(releasedDate, forKeyPath: "released_date")
+          game.setValue(rating, forKeyPath: "rating")
+          game.setValue(added, forKeyPath: "added")
+          game.setValue(esrbRating, forKeyPath: "esrb_rating")
+          game.setValue(descriptionRaw, forKeyPath: "description_raw")
+          game.setValue(image, forKey: "image")
+          do {
+            try taskContext.save()
+            observer.onNext(true)
+            observer.onCompleted()
+          } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+            observer.onError(error)
+          }
         }
       }
-    }
-  
-  func getMaxId(completion: @escaping(_ maxId: Int) -> Void) {
-    let taskContext = newTaskContext()
-    taskContext.performAndWait {
-      let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
-      let sortDescriptor = NSSortDescriptor(key: "id", ascending: false)
-      fetchRequest.sortDescriptors = [sortDescriptor]
-      fetchRequest.fetchLimit = 1
-      do {
-        let lastMember = try taskContext.fetch(fetchRequest)
-        if let member = lastMember.first, let position = member.value(forKeyPath: "id") as? Int {
-          completion(position)
-        } else {
-          completion(0)
-        }
-      } catch {
-        print(error.localizedDescription)
-      }
+      return Disposables.create()
     }
   }
-
-  func deleteFavorites(_ id: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
-      let taskContext = newTaskContext()
+  
+  func deleteFavorites(_ id: Int) -> Observable<Bool> {
+    return Observable<Bool>.create { observer in
+      let taskContext = self.newTaskContext()
       taskContext.perform {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorites")
         fetchRequest.fetchLimit = 1
@@ -141,27 +136,21 @@ class FavoritesProvider {
         batchDeleteRequest.resultType = .resultTypeCount
         if let batchDeleteResult = try? taskContext.execute(batchDeleteRequest) as? NSBatchDeleteResult {
           if batchDeleteResult.result != nil {
-            completion(.success(true))
+            observer.onNext(true)
           }
         }
       }
+      return Disposables.create()
     }
+  }
   
-  func deleteAll(){
-    // Get the managed object context for the Core Data stack
+  func deleteAll() {
     let context = persistentContainer.viewContext
-
-    // Create a fetch request for the entity you want to delete from
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorites")
-
-    // Create a batch delete request for the fetch request
     let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-
-    // Execute the batch delete request
     do {
         try context.execute(batchDeleteRequest)
     } catch {
-        // Handle the error
     }
   }
 }

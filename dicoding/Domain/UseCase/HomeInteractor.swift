@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol HomeUseCase {
 
-  func getGames(completion: @escaping (Result<[Game], Error>) -> Void)
-  func getFavorites(completion: @escaping (Result<[Game], Error>) -> Void)
+  func getGames() -> Observable<[Game]>
+  func getFavorites() -> Observable<[Game]>
 
 }
 
@@ -22,17 +23,11 @@ class HomeInteractor: HomeUseCase {
     self.repository = repository
   }
   
-  func getGames(
-    completion: @escaping (Result<[Game], Error>) -> Void
-  ) {
-    repository.getGames { result in
-      completion(result)
-    }
+  func getGames() -> Observable<[Game]> {
+    repository.getGames()
   }
 
-  func getFavorites(completion: @escaping (Result<[Game], Error>) -> Void) {
-    repository.getFavorites { result in
-      completion(result)
-    }
+  func getFavorites() -> Observable<[Game]> {
+    repository.getFavorites()
   }
 }

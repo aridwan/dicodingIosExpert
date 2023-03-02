@@ -7,61 +7,67 @@
 
 import Foundation
 import Alamofire
+import RxSwift
+
 
 protocol RemoteDataSourceProtocol: AnyObject {
-
-  func getGames(result: @escaping (Result<[Game], URLError>) -> Void)
-  func getDetailGame(game: Game, result: @escaping (Result<DetailGame, URLError>) -> Void)
-
+  
+  func getGames() -> Observable<[Game]>
+  func getDetailGame(game: Game) -> Observable<DetailGame>
+  
 }
 
 final class RemoteDataSource: NSObject {
-
+  
   private override init() { }
-
+  
   static let sharedInstance: RemoteDataSource =  RemoteDataSource()
-
+  
 }
 
 extension RemoteDataSource: RemoteDataSourceProtocol {
-
-  func getGames(result: @escaping (Result<[Game], URLError>) -> Void) {
-    guard let url = URL(string: Endpoint.listGame) else { return }
-
+  
+  func getGames() -> Observable<[Game]> {
     let params: [String: String] = [
       "key": Constants.APIKey,
       "page": "1",
       "page_size": "15"
     ]
-    
-    AF.request(url, parameters: params).validate().responseDecodable(of: ListGame.self) { response in
-      switch response.result {
-      case .success(let value):
-        result(.success(value.results ?? [Game]()))
-      case .failure:
-        result(.failure(.invalidResponse))
+    return Observable<[Game]>.create { observer in
+      if let url = URL(string: Endpoint.listGame) {
+        AF.request(url, parameters: params).validate().responseDecodable(of: ListGame.self) { response in
+          switch response.result {
+          case .success(let value):
+            observer.onNext(value.results ?? [Game]())
+            observer.onCompleted()
+          case .failure:
+            observer.onError(URLError.invalidResponse)
+          }
+        }
       }
-
+      return Disposables.create()
     }
   }
   
-  func getDetailGame(game: Game, result: @escaping (Result<DetailGame, URLError>) -> Void) {
-    guard let url = URL(string: "\(Endpoint.listGame)/\(game.id ?? 0)") else { return }
-
+  func getDetailGame(game: Game) -> Observable<DetailGame> {
     let params: [String: String] = [
       "key": Constants.APIKey,
       "page": "1",
       "page_size": "15"
     ]
-    
-    AF.request(url, parameters: params).validate().responseDecodable(of: DetailGame.self) { response in
-      switch response.result {
-      case .success(let value):
-        result(.success(value))
-      case .failure:
-        result(.failure(.invalidResponse))
+    return Observable<DetailGame>.create{ observer in
+      if let url = URL(string: "\(Endpoint.listGame)/\(game.id ?? 0)") {
+        AF.request(url, parameters: params).validate().responseDecodable(of: DetailGame.self) { response in
+          switch response.result {
+          case .success(let value):
+            observer.onNext(value)
+            observer.onCompleted()
+          case .failure:
+            observer.onError(URLError.invalidResponse)
+          }
+        }
       }
-
+      return Disposables.create()
     }
   }
 }

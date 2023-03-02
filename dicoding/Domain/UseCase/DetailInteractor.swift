@@ -7,13 +7,14 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 protocol DetailUseCase {
 
-  func getDetailGame(game: Game, completion: @escaping (Result<DetailGame, Error>) -> Void)
-  func setFavorites(game: Game, image: Data, completion: @escaping (Result<Bool, Error>) -> Void)
-  func removeFavorites(game: Game, completion: @escaping (Result<Bool, Error>) -> Void)
-  func checkFavorites(id: Int, completion: @escaping (Result<Game, Error>) -> Void)
+  func getDetailGame(game: Game) -> Observable<DetailGame>
+  func setFavorites(game: Game, image: Data) -> Observable<Bool>
+  func removeFavorites(game: Game) -> Observable<Bool>
+  func checkFavorites(id: Int) -> Observable<Game>
   func deleteAll()
 }
 
@@ -31,28 +32,20 @@ class DetailInteractor: DetailUseCase {
     self.game = game
   }
 
-  func getDetailGame(game: Game, completion: @escaping (Result<DetailGame, Error>) -> Void) {
-    repository.getDetailGame(game: game) { result in
-      completion(result)
-    }
+  func getDetailGame(game: Game) -> Observable<DetailGame> {
+    repository.getDetailGame(game: game)
   }
   
-  func setFavorites(game: Game, image: Data, completion: @escaping (Result<Bool, Error>) -> Void) {
-    repository.addFavoriteGame(game: game, image: image) { result in
-      completion(result)
-    }
+  func setFavorites(game: Game, image: Data) -> Observable<Bool>{
+    repository.addFavoriteGame(game: game, image: image)
   }
   
-  func removeFavorites(game: Game, completion: @escaping (Result<Bool, Error>) -> Void) {
-    repository.removeFavoriteGame(game: game) { result in
-      completion(result)
-    }
+  func removeFavorites(game: Game) -> Observable<Bool> {
+    repository.removeFavoriteGame(game: game)
   }
 
-  func checkFavorites(id: Int, completion: @escaping (Result<Game, Error>) -> Void) {
-    repository.checkFavorites(id: id) { result in
-      completion(result)
-    }
+  func checkFavorites(id: Int) -> Observable<Game> {
+    repository.checkFavorites(id: id)
   }
   
   func deleteAll() {

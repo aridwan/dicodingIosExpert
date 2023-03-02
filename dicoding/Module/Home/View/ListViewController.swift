@@ -13,12 +13,9 @@ class ListViewController: UIViewController {
   @IBOutlet weak var table: UITableView!
   
   var presenter: HomePresenter?
-//  var games = [Game]()
   
     override func viewDidLoad() {
       super.viewDidLoad()
-      let homeUseCase = Injection.init().provideHome()
-      self.presenter = HomePresenter.init(homeUseCase: homeUseCase)
       self.registerCell()
       self.setNavigationItem()
       self.presenter?.getGames {

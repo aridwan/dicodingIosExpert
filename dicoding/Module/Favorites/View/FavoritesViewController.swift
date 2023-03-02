@@ -15,8 +15,6 @@ class FavoritesViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let homeUseCase = Injection.init().provideHome()
-    self.presenter = HomePresenter.init(homeUseCase: homeUseCase)
     self.setNavigationItem()
     self.registerCell()
   }

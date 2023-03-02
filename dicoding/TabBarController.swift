@@ -21,9 +21,19 @@ class TabBarController: UITabBarController {
 
   func setupVCs() {
     guard let gamesImage = UIImage(systemName: "gamecontroller.fill"), let favoritesImage = UIImage(systemName: "star.fill") else {return}
+    
+    let listVC = ListViewController()
+    let favoritesVC = FavoritesViewController()
+    
+    let homeUseCase = Injection.init().provideHome()
+    let presenter = HomePresenter.init(homeUseCase: homeUseCase)
+    let favoritesPresenter = HomePresenter.init(homeUseCase: homeUseCase)
+    
+    favoritesVC.presenter = favoritesPresenter
+    listVC.presenter = presenter
         viewControllers = [
-            createNavController(for: ListViewController(), title: NSLocalizedString("Games", comment: ""), image: gamesImage),
-            createNavController(for: FavoritesViewController(), title: NSLocalizedString("Favorites", comment: ""), image: favoritesImage)
+            createNavController(for: listVC, title: NSLocalizedString("Games", comment: ""), image: gamesImage),
+            createNavController(for: favoritesVC, title: NSLocalizedString("Favorites", comment: ""), image: favoritesImage)
         ]
     }
   
