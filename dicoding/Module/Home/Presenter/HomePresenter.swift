@@ -34,23 +34,6 @@ class HomePresenter: ObservableObject {
         self.loadingState = false
         completion()
       }.disposed(by: disposeBag)
-    
-//    { result in
-//      switch result {
-//      case .success(let games):
-//        DispatchQueue.main.async {
-//          self.loadingState = false
-//          self.games = games
-//          completion()
-//        }
-//      case .failure(let error):
-//        DispatchQueue.main.async {
-//          self.loadingState = false
-//          self.errorMessage = error.localizedDescription
-//          completion()
-//        }
-//      }
-//    }
   }
  
   func goToDetail(with game: Game, navigationController: UINavigationController) {
@@ -69,22 +52,5 @@ class HomePresenter: ObservableObject {
         self.loadingState = false
         completion()
       }.disposed(by: disposeBag)
-
-//    { result in
-//      switch result {
-//      case .success(let games):
-//        DispatchQueue.main.async {
-//          self.loadingState = false
-//          self.games = games
-//          completion()
-//        }
-//      case .failure(let error):
-//        DispatchQueue.main.async {
-//          self.loadingState = false
-//          self.errorMessage = error.localizedDescription
-//          completion()
-//        }
-//      }
-//    }
   }
 }

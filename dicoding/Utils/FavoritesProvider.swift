@@ -52,6 +52,7 @@ class FavoritesProvider {
               added: result.value(forKeyPath: "added") as? Int ?? 0,
               esrbRating: result.value(forKeyPath: "esrb_rating") as? String ?? "",
               descriptionRaw: result.value(forKeyPath: "description_raw") as? String ?? "",
+              backgroundImage: result.value(forKeyPath: "background_image") as? String ?? "",
               savedImage: result.value(forKeyPath: "image") as? Data ?? Data())
             games.append(game)
           }
@@ -83,6 +84,7 @@ class FavoritesProvider {
               added: result.value(forKeyPath: "added") as? Int ?? 0,
               esrbRating: result.value(forKeyPath: "esrb_rating") as? String ?? "",
               descriptionRaw: result.value(forKeyPath: "description_raw") as? String ?? "",
+              backgroundImage: result.value(forKeyPath: "background_image") as? String ?? "",
               savedImage: result.value(forKeyPath: "image") as? Data ?? Data()
             )
             observer.onNext(game)
@@ -97,7 +99,7 @@ class FavoritesProvider {
     }
   }
   
-  func createFavorites(id: Int, name: String, releasedDate: String, rating: Double, added: Int, esrbRating: String, descriptionRaw: String, image: Data) -> Observable<Bool> {
+  func createFavorites(id: Int, name: String, releasedDate: String, rating: Double, added: Int, esrbRating: String, descriptionRaw: String, backgroundImage: String, image: Data) -> Observable<Bool> {
     return Observable<Bool>.create { observer in
       let taskContext = self.newTaskContext()
       taskContext.performAndWait {
@@ -110,6 +112,7 @@ class FavoritesProvider {
           game.setValue(added, forKeyPath: "added")
           game.setValue(esrbRating, forKeyPath: "esrb_rating")
           game.setValue(descriptionRaw, forKeyPath: "description_raw")
+          game.setValue(backgroundImage, forKey: "background_image")
           game.setValue(image, forKey: "image")
           do {
             try taskContext.save()

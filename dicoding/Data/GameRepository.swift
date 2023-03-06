@@ -41,28 +41,10 @@ final class GameRepository: NSObject {
 extension GameRepository: GameRepositoryProtocol {
   func getGames() -> Observable<[Game]> {
     return remote.getGames()
-//    remote.getGames { response in
-//      switch response {
-//      case (.success(let gameResponses)):
-//        result(.success(gameResponses))
-//      case .failure(let error):
-//        result(.failure(error))
-//      }
-      
-//    }
   }
 
   func getDetailGame(game: Game) -> Observable<DetailGame> {
     remote.getDetailGame(game: game)
-//    remote.getDetailGame(game: game) { response in
-//      switch response {
-//      case (.success(let gameResponse)):
-//        result(.success(gameResponse))
-//      case .failure(let error):
-//        result(.failure(error))
-//      }
-//
-//    }
   }
 
   func addFavoriteGame(game: Game, image: Data) -> Observable<Bool> {
@@ -73,38 +55,16 @@ extension GameRepository: GameRepositoryProtocol {
                            added: game.added ?? 0,
                            esrbRating: game.esrbRating?.name?.rawValue ?? "",
                            descriptionRaw: game.descriptionRaw ?? "",
+                           backgroundImage: game.backgroundImage ?? "",
                            image: image)
-//    { response in
-//      switch response {
-//      case .success(let success):
-//        result(.success(success))
-//      case .failure(let error):
-//        result(.failure(error))
-//      }
-//    }
   }
   
   func removeFavoriteGame(game: Game) -> Observable<Bool> {
      locale.deleteFavorites(game.id ?? 0)
-//      switch response {
-//      case .success(let success):
-//        result(.success(success))
-//      case .failure(let error):
-//        result(.failure(error))
-//      }
-//    }
   }
   
   func checkFavorites(id: Int) -> Observable<Game> {
     locale.getGame(by: id)
-//    { response in
-//      switch response {
-//      case .success(let game):
-//        result(.success(game))
-//      case .failure(let error):
-//        result(.failure(error))
-//      }
-//    }
   }
   
   func deleteAll() {
@@ -113,13 +73,5 @@ extension GameRepository: GameRepositoryProtocol {
   
   func getFavorites() -> Observable<[Game]> {
     locale.getAllFavorites()
-//    { games in
-//      switch games {
-//      case .success(let success):
-//        result(.success(success))
-//      case .failure(let failure):
-//        result(.failure(failure))
-//      }
-//    }
   }
 }

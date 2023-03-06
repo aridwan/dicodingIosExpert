@@ -36,7 +36,7 @@ class DetailInteractor: DetailUseCase {
     repository.getDetailGame(game: game)
   }
   
-  func setFavorites(game: Game, image: Data) -> Observable<Bool>{
+  func setFavorites(game: Game, image: Data) -> Observable<Bool> {
     repository.addFavoriteGame(game: game, image: image)
   }
   

@@ -34,23 +34,6 @@ class DetailPresenter: ObservableObject {
         self.loadingState = false
         completion()
       }.disposed(by: disposeBag)
-    
-//    { result in
-//      switch result {
-//      case .success(let detailGame):
-//        DispatchQueue.main.async {
-//          self.loadingState = false
-//          self.detailGame = detailGame
-//          completion()
-//        }
-//      case .failure(let error):
-//        DispatchQueue.main.async {
-//          self.loadingState = false
-//          self.errorMessage = error.localizedDescription
-//          completion()
-//        }
-//      }
-//    }
   }
   
   func setFavorites(game: Game, image: Data, completion: @escaping (Bool) -> Void) {
@@ -64,17 +47,6 @@ class DetailPresenter: ObservableObject {
         self.loadingState = false
         completion(false)
       }.disposed(by: disposeBag)
-    
-//    { result in
-//      switch result {
-//      case .success:
-//          completion(true)
-//      case .failure(let error):
-//        self.loadingState = false
-//        self.errorMessage = error.localizedDescription
-//        completion(false)
-//      }
-//    }
   }
   
   func removeFavorites(game: Game, completion: @escaping (Bool) -> Void) {
@@ -88,17 +60,6 @@ class DetailPresenter: ObservableObject {
         self.loadingState = false
         completion(false)
       } .disposed(by: disposeBag)
-    
-//    { result in
-//      switch result {
-//      case .success:
-//          completion(true)
-//      case .failure(let error):
-//        self.loadingState = false
-//        self.errorMessage = error.localizedDescription
-//        completion(false)
-//      }
-//    }
   }
   
   func checkFavorites(id: Int, completion: @escaping (Game?) -> Void) {
@@ -110,14 +71,6 @@ class DetailPresenter: ObservableObject {
         self.errorMessage = error.localizedDescription
       } onCompleted: {
       }.disposed(by: disposeBag)
-//    { result in
-//      switch result {
-//      case .success(let game):
-//        completion(game)
-//      case .failure:
-//        break
-//      }
-//    }
   }
   
   func deleteAll() {

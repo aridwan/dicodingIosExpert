@@ -47,7 +47,7 @@ class Game: Decodable {
     var savedImage: Data?
     var image: UIImage?
   
-  init(id: Int, name: String, releasedDate: String, rating: Double, added: Int, esrbRating: String, descriptionRaw: String, savedImage: Data) {
+  init(id: Int, name: String, releasedDate: String, rating: Double, added: Int, esrbRating: String, descriptionRaw: String, backgroundImage: String, savedImage: Data) {
     self.id = id
     self.name = name
     self.released = releasedDate
@@ -55,6 +55,7 @@ class Game: Decodable {
     self.added = added
     self.esrbRating = EsrbRating(id: 0, name: Name.init(rawValue: esrbRating), slug: Slug.init(rawValue: esrbRating))
     self.descriptionRaw = descriptionRaw
+    self.backgroundImage = backgroundImage
     self.savedImage = savedImage
   }
 

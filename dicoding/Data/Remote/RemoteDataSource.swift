@@ -55,7 +55,7 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
       "page": "1",
       "page_size": "15"
     ]
-    return Observable<DetailGame>.create{ observer in
+    return Observable<DetailGame>.create { observer in
       if let url = URL(string: "\(Endpoint.listGame)/\(game.id ?? 0)") {
         AF.request(url, parameters: params).validate().responseDecodable(of: DetailGame.self) { response in
           switch response.result {
